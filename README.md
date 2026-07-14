@@ -1,75 +1,56 @@
 # Claude Code Game Builder
 
-> An AI Agent Skill for transforming game ideas into production-ready game development projects.
+> A production-oriented AI Agent Skill for Claude Code that helps transform game ideas into structured game development projects.
 
-![Claude Code](https://img.shields.io/badge/Claude-Code-blue)
-![Skill Version](https://img.shields.io/badge/Skill-V2-green)
-![License](https://img.shields.io/badge/license-MIT-orange)
-
----
-
-# Overview
-
-Claude Code Game Builder is a modular AI Agent Skill designed to help developers transform game ideas into structured, production-ready game projects.
-
-Instead of only generating code, this Skill provides a complete game development workflow.
-
-It helps Claude Code work like a professional game development team by providing:
-
-- Game concept analysis
-- Gameplay system planning
-- Technical architecture design
-- Project structure generation
-- Asset planning
-- Development workflow management
-- Quality verification
-
-The goal is to transform simple game ideas into complete and executable development plans.
+一个面向 Claude Code 的游戏开发 AI Skill。
+它可以帮助开发者从「游戏想法」开始，逐步生成游戏设计、系统规划、项目结构和开发流程。
 
 ---
 
-# Features
+# ✨ Features
 
-## Idea → Game Project
+## 🎮 Idea → Game Project
 
-Convert natural language game ideas into structured game development documents.
+Turn simple game ideas into complete development plans.
 
 Example:
 
 Input:
 
 ```
-Create a cozy puzzle game about knitting.
+I want to create a cozy puzzle game about knitting.
 ```
 
 Output:
 
 ```
-Game Design Document
+Game Concept
 
-Core Gameplay Mechanics
+Core Gameplay
 
-System Architecture
+Game Systems
 
-Asset Requirements
+Technical Architecture
+
+Asset Planning
 
 Development Roadmap
-
-Implementation Plan
 ```
 
 ---
 
-# Modular AI Agent Architecture
+## 🤖 AI Agent Architecture
 
-This Skill uses a layered architecture instead of a single large prompt.
+This Skill is designed as a modular AI workflow instead of a single prompt.
+
+Architecture:
 
 ```
                  SKILL.md
 
                     ↓
 
-            Workflow Controller
+              Workflow System
 
                     ↓
 
@@ -84,77 +65,124 @@ This Skill uses a layered architecture instead of a single large prompt.
 
                     ↓
 
-               Generators
+              Generators
 ```
 
-Each module has independent responsibilities.
-
 ---
 
-# Architecture
+# 📦 Installation
 
-## Brain
+## Requirements
 
-Responsible for:
+Before installation, make sure you have:
 
-- Understanding user requirements
-- Analyzing game concepts
-- Breaking down complex tasks
-- Making development decisions
-- Selecting appropriate workflows
+- Claude Code installed
+- Git installed
+- A Claude account with Claude Code access
 
 
 ---
 
-## Executors
+# Method 1: Clone Repository (Recommended)
 
-Responsible for:
+Clone this repository:
 
-- Running development workflows
-- Managing task execution order
-- Coordinating multiple actions
-- Controlling the production process
+```bash
+git clone https://github.com/your-name/claude-code-game-builder.git
+```
 
+Then copy the Skill folder into your Claude Code skills directory.
 
----
+Example:
 
-## Actions
+```
+.claude/
 
-Responsible for:
+└── skills/
 
-- Executing specific operations
-- Creating project files
-- Updating structures
-- Applying development rules
+    └── game-builder/
 
+        ├── SKILL.md
+        ├── brain/
+        ├── executors/
+        ├── actions/
+        ├── generators/
+        └── quality/
+```
 
----
-
-## Generators
-
-Responsible for:
-
-- Creating documents
-- Generating templates
-- Producing structured outputs
-- Standardizing development materials
-
+Restart Claude Code after installation.
 
 ---
 
-## Quality
+# Method 2: Manual Installation
 
-Responsible for:
+1. Download this repository.
 
-- Checking output consistency
-- Reviewing generated content
-- Detecting missing requirements
-- Improving development quality
+2. Create a Skill folder:
 
+```
+.claude/skills/game-builder/
+```
+
+3. Copy all files into this folder.
+
+4. Make sure the entry file exists:
+
+```
+SKILL.md
+```
+
+5. Restart Claude Code.
 
 ---
 
-# Project Structure
+# 🚀 Usage
+
+After installation, open Claude Code.
+
+Example commands:
+
+```
+Create a mobile puzzle game.
+```
+
+or:
+
+```
+Help me design a cozy simulation game.
+```
+
+Claude Code will automatically use this Skill workflow.
+
+The process:
+
+```
+Game Idea
+
+↓
+
+Requirement Analysis
+
+↓
+
+Game Design
+
+↓
+
+System Architecture
+
+↓
+
+Development Plan
+
+↓
+
+Quality Review
+```
+
+---
+
+# 🏗 Project Structure
 
 ```
 claude-code-game-builder/
@@ -168,14 +196,19 @@ claude-code-game-builder/
 ├── SYSTEM_RULES.md
 
 ├── brain/
-│
+│   └── Decision making logic
+
 ├── executors/
-│
+│   └── Workflow execution
+
 ├── actions/
-│
+│   └── Specific operations
+
 ├── generators/
-│
+│   └── Output generation
+
 ├── quality/
+│   └── Review system
 
 ├── templates/
 
@@ -184,155 +217,98 @@ claude-code-game-builder/
 
 ---
 
-# Installation
+# 🧠 Core Modules
 
-## Clone Repository
+## Brain
 
-```bash
-git clone https://github.com/your-name/claude-code-game-builder.git
-```
+负责：
 
----
+- Understanding user requirements
+- Breaking down game ideas
+- Making development decisions
 
-## Install Skill
 
-Copy the Skill into your Claude Code skills directory.
+## Executors
 
-Example:
+负责：
 
-```
-.claude/
+- Running workflows
+- Managing task order
+- Coordinating different modules
 
-└── skills/
 
-    └── game-builder/
+## Actions
 
-        └── SKILL.md
-```
+负责：
 
-Restart Claude Code after installation.
+- File operations
+- Project modifications
+- Applying rules
 
----
 
-# Usage
+## Generators
 
-Example:
+负责：
 
-```
-Create a mobile puzzle game about cooking.
-```
+- Creating documents
+- Generating structured outputs
 
-Claude Code will analyze:
 
-```
-Game Idea
+## Quality
 
-↓
+负责：
 
-Requirement Analysis
+- Checking completeness
+- Finding missing information
+- Improving output quality
 
-↓
-
-Core Gameplay Loop
-
-↓
-
-Game Systems
-
-↓
-
-Technical Architecture
-
-↓
-
-Development Tasks
-
-↓
-
-Quality Review
-```
 
 ---
 
-# Development Workflow
-
-The Skill follows a complete game development pipeline.
-
-```
-Game Idea
-
-↓
-
-Game Analysis
-
-↓
-
-Design Documents
-
-↓
-
-System Planning
-
-↓
-
-Project Structure
-
-↓
-
-Implementation Guidance
-
-↓
-
-Quality Verification
-
-↓
-
-Production Ready Output
-```
-
----
-
-# Design Philosophy
+# 🎯 Design Philosophy
 
 ## Structure Before Code
 
-A good game starts with a clear system design.
+Good games start with good planning.
 
-This Skill prioritizes:
+This Skill focuses on:
 
-- Gameplay clarity
-- Technical feasibility
+- Clear gameplay loops
 - Scalable architecture
 - Maintainable structure
 
 
 ---
 
-## Modular Intelligence
+## Production-Oriented
 
-Instead of depending on one huge prompt, the Skill separates intelligence into independent modules.
+This is not just a prompt collection.
 
-Benefits:
+The goal is:
 
-- Easier maintenance
-- Better scalability
-- More reliable outputs
-- Flexible expansion
+```
+Idea
 
+↓
+
+Design
+
+↓
+
+Plan
+
+↓
+
+Build
+```
+
+帮助开发者真正完成游戏开发流程。
 
 ---
 
-## Production-Oriented Output
+# 📝 Example Projects
 
-The goal is not only generating ideas.
-
-The goal is helping developers actually build games.
-
----
-
-# Examples
-
-Supported scenarios:
+Future examples:
 
 - Puzzle Games
 - Simulation Games
@@ -343,52 +319,51 @@ Supported scenarios:
 
 ---
 
-# Roadmap
+# 🛣 Roadmap
 
-## Version 2
+## V2 Completed
 
-Completed:
+✅ Modular Skill architecture
 
-- Modular Skill architecture
-- Workflow system
-- Decision system
-- Executor system
-- Generator system
-- Quality verification system
-- Output specifications
+✅ Workflow system
+
+✅ Decision system
+
+✅ Executor system
+
+✅ Generator system
+
+✅ Quality checking system
 
 
 ---
 
-## Future Development
-
-Planned:
+## Future
 
 - More game templates
-- Engine-specific workflows
+- Unity workflow support
+- Unreal workflow support
 - Automated project generation
 - Asset pipeline integration
-- Advanced AI game production assistant
 
 
 ---
 
-# Contributing
+# 🤝 Contributing
 
 Contributions are welcome.
 
 You can contribute:
 
 - New workflows
+- New game templates
 - New generators
-- New templates
-- Quality rules
-- Example projects
+- Better quality rules
 
 
 ---
 
-# License
+# 📄 License
 
 MIT License
 
@@ -397,10 +372,10 @@ MIT License
 
 # About
 
-Claude Code Game Builder is an experimental AI game development workflow system.
+Claude Code Game Builder
 
-Built for Claude Code.
+一个帮助 Claude Code 从游戏创意到项目落地的 AI 游戏开发 Skill。
 
 Mission:
 
-Turn game ideas into structured, production-ready projects with AI assistance.
+**Turn ideas into playable games with AI assistance.**
