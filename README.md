@@ -117,7 +117,7 @@ The Skill analyzes:
 输入：
 
 ```
-制作一个关于毛线编织的治愈小游戏
+制作一个关于咖啡店经营的治愈小游戏
 ```
 
 Skill 会分析：
@@ -371,7 +371,7 @@ You need:
 Clone:
 
 ```bash
-git clone https://github.com/your-name/claude-code-game-builder.git
+git clone https://github.com/hymio1/claude-code-game-builder.git
 ```
 
 
